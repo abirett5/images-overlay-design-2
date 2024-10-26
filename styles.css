@@ -1,0 +1,80 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 90vh;
+    background: #fff;
+}
+
+.container .img-box {
+    position: relative;
+    width: 300px;
+    height: 200px;
+    border-radius: 25px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.container img {
+    width: 100%;
+    height: 100%;
+}
+
+.overlay {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: 0.6s;
+    background: rgba(51, 51, 51, 0.90);
+}
+
+.img-box:hover .overlay {
+    opacity: 1;
+}
+
+.label {
+    position: absolute;
+    left: 10%;
+    top: 0;
+    width: 30%;
+    height: 12%;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 600;
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+    transform: translateY(-24px);
+    z-index: 1;
+    transition: 0.5s ease-in-out;
+    color: #fff;
+    background-color: dodgerblue;
+}
+
+p.label-content {
+    margin-top: 5px;
+}
+
+.img-box:hover .label {
+    transform: translateY(0);
+}
+
+h4 {
+    position: absolute;
+    right:50%;
+    top: 10%;
+    opacity: 0;
+    font-size: 22px;
+    font-weight: 600;
+    z-index: 1;
+    transition: 0.5s;
+    color: #fff;
+}
+
+.img-box:hover h4 {
+    opacity: 1;
+    transform: translateX(50%) translateY(-10%);
+}
