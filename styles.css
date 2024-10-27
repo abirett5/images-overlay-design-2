@@ -43,6 +43,10 @@ body {
     opacity: 1;
 }
 
+.img-box:active .overlay {
+    background: rgb(102, 102, 102);
+}
+
 .label {
     position: absolute;
     left: 10%;
